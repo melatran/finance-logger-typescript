@@ -58,7 +58,26 @@ var circ = function (diameter) {
 
 - TS allows type check leading to less errors
 
-## Arrays
+## Arrays and Objects
 
+`let names = ['luigi', 'mario', 'yoshi'];`
 
+- strings are declare in the array, so you can't add a number or boolean to this array and vice versa
 
+`let mixed = ['ken', 4, 'life', 8, true];`
+
+- as long as it's declared first, this array will take any string, numbers, or booleans
+
+```
+let ninja = {
+  name: 'chai',
+  belt: 'black',
+  age: 14
+};
+```
+
+- fix typing of attributes in objects where the attributes behave like variables and cannot be changed so always has to be a string
+
+- once it has been defined, it cannot be changed and extra properties cannot be added to the object
+
+- if you want to overide the object, it has to have all the objects in order to be created(similar to intialize in Ruby)
