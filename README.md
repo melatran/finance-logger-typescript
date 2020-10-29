@@ -27,6 +27,19 @@ Similar to Venmo where it logs the finances owed but there are no bank accounts 
 
 - `tsc sandbox.ts -w` will watch the file and automatically make changes to the JS file
 
+- run `tsc --init` when files are organized
+
+```
+  "outDir": "./public",
+  "rootDir": "./src",  
+
+   "include":["src"]
+```
+
+- this is telling to look in src to compile JS files into the public; run `tsc`
+
+- only compile things inside the src folder
+
 ## Type Basics
 ![Screen Shot 2020-10-29 at 1 51 22 PM](https://user-images.githubusercontent.com/59414750/97625243-debffe00-19ed-11eb-9c67-41d4702c8f4b.png)
 
