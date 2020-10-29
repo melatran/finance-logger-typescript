@@ -151,4 +151,32 @@ age = true;
 
 - reverts TS back to JS so we don't get errors or hints on what types it should be
 
+## Function Basics
+```
+let greet: Function;
 
+greet = () => {
+  console.log('hello');
+}
+```
+
+- with the code below, if the third argument is not passed, then it will return the default value 10 and if a third argument is passed through, then that will override the default
+
+- `c?: number` is optional, not required
+
+```
+const add = (a: number, b: number, c: number|string = 10) => {
+console.log(a + b);
+console.log(c);
+}
+
+add(5,10, 20);
+```
+
+- with a colo after the function, it's the result has to be a number even though TS already made the inference
+
+- return of `:void` is not the same as undefined but the complete lack of value
+
+```
+const minus = (a: number, b: number): number => {return a + b;}
+``
