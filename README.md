@@ -279,3 +279,10 @@ public amount: number;
 ```
 
 - don't need to assing these variables at the top
+
+## Modules (using ES6)
+- when importing a file, use js because js is the file that browsers interact with
+
+- making multiple requests; could use webpack
+
+## Interfaces
