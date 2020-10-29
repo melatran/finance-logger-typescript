@@ -1,4 +1,20 @@
 import { Invoice } from './classes/invoice.js';
+const me = {
+    name: 'shaun',
+    //age: 30,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('I spent ', amount);
+        return amount;
+    },
+};
+console.log(me);
+me.speak('hello, world');
+const greetPerson = (person) => {
+    console.log('hello ', person.name);
+};
 const invOne = new Invoice('MoMo', 'life', 3034);
 const invTwo = new Invoice('Emma', 'Food', 5000);
 let invoices = [];
