@@ -81,3 +81,50 @@ let ninja = {
 - once it has been defined, it cannot be changed and extra properties cannot be added to the object
 
 - if you want to overide the object, it has to have all the objects in order to be created(similar to intialize in Ruby)
+
+## Explicit Types
+`let character: string;`
+
+- creating a variable but only allow for the value to be a string
+
+`let heroes: string[];`
+
+- create a new array in the future but only strings are allow
+
+- this does not set it as an empty array so you need to set it equal to [] in order to be able to push into it
+
+```
+let heroes: string[] = [];
+
+heroes.push('Hulk')
+```
+
+- union types can be used for mixed arrays using `|` to declare several types it can be
+
+```
+let ages: (string|number)[] = [];
+
+ages.push(3);
+ages.push("21");
+```
+
+- declaring properties with objects
+
+```
+let heroOne: object;
+heroOne = {name: 'Thor', age: 23043};
+
+let heroTwo: {
+  name: string,
+  age: number,
+  powers: string[]
+};
+
+heroTwo = {
+  name: 'Iron Man',
+  age: 43,
+  powers: ['space suit', 'brains']
+}
+```
+
+

@@ -1,30 +1,38 @@
+//explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+character = 'Thor';
+isLoggedIn = false;
+
 //arrays
+let heroes: string[] = [];
 
-let names = ['luigi', 'mario', 'yoshi'];
-names.push('toad');
+heroes.push('Hulk')
 
-let numbers = [1, 2, 3, 4, 5]
-numbers.push(9)
+//union types
+let ages: (string|number)[] = [];
 
-let mixed = ['ken', 4, 'life', 8, true];
-mixed.push(2)
-mixed.push('a')
-mixed.push(true)
+ages.push(3);
+ages.push("21");
+
+let uid: string|number;
+uid = '123';
+uid = 123;
 
 //objects
+let heroOne: object;
+heroOne = {name: 'Thor', age: 23043};
 
-let ninja = {
-  name: 'chai',
-  belt: 'black',
-  age: 14
+let heroTwo: {
+  name: string,
+  age: number,
+  powers: string[]
 };
 
-ninja.age = 12;
-ninja.name = 'Ang';
-// ninja.age = "12";
-// ninja.skills = ['fight']
-
-// nina = {
-//   name: 'mulan',
-//   age: 40,
-// }
+heroTwo = {
+  name: 'Iron Man',
+  age: 43,
+  powers: ['space suit', 'brains']
+}
