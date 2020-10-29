@@ -179,4 +179,20 @@ add(5,10, 20);
 
 ```
 const minus = (a: number, b: number): number => {return a + b;}
-``
+```
+
+## Aliases - Reduce Code Deplication
+```
+type StringOrNum = string | number;
+type objWithName = { name: string, uid: StringOrNum};
+
+const logDetails = (uid: StringOrNum, item: string) => {
+  console.log(`${item} has a uid of ${uid}`);
+}
+
+const greet = (user: objWithName) => {
+  console.log(`${user.name} says hello`);
+}
+```
+
+## Function Signatures
