@@ -226,3 +226,14 @@ calc = (numOne: number, numTwo: number, action: string) => {
   }
 }
 ```
+
+## The DOM and Type Casting
+`const form = document.querySelector('form')!;`
+
+- the `!` just allows to say that we know it's an HTML element
+
+- `const form = document.querySelector('.new-item-form')!;` when we pass a class instead of an id tag, it doesn't know that it's a form but it's some sort of element
+
+- typecasting will declare what type it is so it will store it as as HTMLFormElement and we can use all the methods associated with it
+
+`const form = document.querySelector('.new-item-form') as HTMLFormElement;`
