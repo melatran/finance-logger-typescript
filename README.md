@@ -127,4 +127,15 @@ heroTwo = {
 }
 ```
 
+## Dynamic(any) Types
+```
+let age: any = 25;
+
+age = true;
+```
+
+- the type is any and not a number so age can be changed
+
+- reverts TS back to JS so we don't get errors or hints on what types it should be
+
 
