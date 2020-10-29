@@ -196,3 +196,33 @@ const greet = (user: objWithName) => {
 ```
 
 ## Function Signatures
+- describes the general structure of a function
+
+`() => void` this function takes no arguments and returns a void
+
+- in the example below, TS infers that it will be returning a void despite a change in argument variables from a to name
+
+- the signature has to match so you can't change it to a number in the new function
+
+```
+let greet: (a: string, b:string) => void;
+
+//template strings ${}
+greet = (name: string, greeting: string) => {
+  console.log(`${name} says ${greeting}`);
+}
+```
+
+- for this function, it requires that the return result is a number so if the result doesn't follow evaluate as truthy first, create conditionals to suit the requirements
+
+```
+let calc: (a: number, b: number, c:string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+  if (action === 'add'){
+    return numOne + numTwo;
+  } else {
+    return numOne - numTwo;
+  }
+}
+```
