@@ -257,4 +257,25 @@ class Invoice {
 
 - `let invoices: Invoice[] = [];` only instances of the class Invoice can be added to the array
 
-- 
+# Public, Private, Readonly
+```
+readonly client: string;
+private details: string;
+public amount: number;
+```
+
+- by adding `private` you don't have access to it outside of the class in the console but you can still access within the class
+
+- `readonly` can't change it but you have access to it
+
+- default is public with both read and write abilities
+
+```
+  constructor(
+    readonly client: string,
+    private details: string,
+    public amount: number,
+  ){}
+```
+
+- don't need to assing these variables at the top
