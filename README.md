@@ -289,3 +289,5 @@ public amount: number;
 - not used to create new object
 
 - if there's a variable in the future called person, then it has to have these attributes in order to be created
+
+- this class must follow this format interface, if format method not present in Invoice class, there would be an error

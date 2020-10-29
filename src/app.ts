@@ -1,37 +1,19 @@
-import {Invoice} from './classes/invoice.js'
+import {Invoice} from './classes/invoice.js';
+import {Payment} from './classes/payments.js';
+import {HasFormatter} from './interfaces/hasFormatter.js'
 
-// interfaces
-export interface IsPerson {
-  name: string;
-  age?: number;
-  speak(a: string): void;
-  spend(a: number): number;
-}
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
 
-const me: IsPerson = {
-  name: 'shaun',
-  //age: 30,
-  speak(text: string): void {
-    console.log(text);
-  },
-  spend(amount: number): number {
-    console.log('I spent ', amount);
-    return amount;
-  },
-};
+// docOne = new Invoice('MoMo', 'life', 250);
+// docTwo = new Payment('Melanie', 'being bad', 2432);
 
-console.log(me);
-me.speak('hello, world');
+// const invOne = new Invoice('MoMo', 'life', 3034);
+// const invTwo = new Invoice('Emma', 'Food', 5000);
 
-const greetPerson = (person: IsPerson): void => {
-  console.log('hello ', person.name);
-}
-
-const invOne = new Invoice('MoMo', 'life', 3034);
-const invTwo = new Invoice('Emma', 'Food', 5000);
-
-let invoices: Invoice[] = [];
-invoices.push(invOne)
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 
@@ -47,10 +29,11 @@ const amount = document.querySelector('#amount') as HTMLInputElement; //input fi
 form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
 
-  console.log(
-    type.value,
-    tofrom.value,
-    details.value,
-    amount.valueAsNumber
-  )
+  let doc: HasFormatter;
+  if (type.value === 'invoice'){
+    doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber)
+  } else {
+    doc = new Payment(tofrom.value, details.value, amount.valueAsNumber)
+  };
+  console.log(doc)
 });
