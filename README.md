@@ -237,3 +237,24 @@ calc = (numOne: number, numTwo: number, action: string) => {
 - typecasting will declare what type it is so it will store it as as HTMLFormElement and we can use all the methods associated with it
 
 `const form = document.querySelector('.new-item-form') as HTMLFormElement;`
+
+## Class
+```
+class Invoice {
+  client: string;
+  details: string;
+  amount: number;
+
+  constructor(c: string, d: string, a: number) {
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+}
+```
+
+- the constructor will take the values sent in and assign it to the properties to intialize the class
+
+- `let invoices: Invoice[] = [];` only instances of the class Invoice can be added to the array
+
+- 
