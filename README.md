@@ -318,4 +318,6 @@ public amount: number;
 
 - store set of constants and associate them with a numeric value
 
-- 
+## Tuples
+
+- arrays that cannot be changed
