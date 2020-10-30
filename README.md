@@ -307,3 +307,9 @@ public amount: number;
 - the item can be a payment or ivoice so the interface HasFormatter allows for either object to be passed
 
 - prepend(start) or append(end)
+
+## Generics
+
+- create reusable code to be used by different types
+
+- `const addUID = <T>(obj: T) => {...}` the T allows access to the attributes passed when the object is created
