@@ -1,4 +1,6 @@
 # Finance Logger
+![Screen Shot 2020-10-30 at 9 30 21 AM](https://user-images.githubusercontent.com/59414750/97724479-93abf680-1a92-11eb-8662-f8a06f7f2e0a.png)
+
 
 Similar to Venmo where it logs the finances owed but there are no bank accounts linked.
 
@@ -291,3 +293,17 @@ public amount: number;
 - if there's a variable in the future called person, then it has to have these attributes in order to be created
 
 - this class must follow this format interface, if format method not present in Invoice class, there would be an error
+
+## Rendering HTML Template
+1. Register a list container(ul) in the constructor
+
+2. Create a render method to render a new `li` to the container
+    - accepts arguments: invoid/payment, heading, position
+
+    - create HTML template(li, h4, p)
+    
+    - add the `li` template to the start/end of the list
+
+- the item can be a payment or ivoice so the interface HasFormatter allows for either object to be passed
+
+- prepend(start) or append(end)
