@@ -313,3 +313,9 @@ public amount: number;
 - create reusable code to be used by different types
 
 - `const addUID = <T>(obj: T) => {...}` the T allows access to the attributes passed when the object is created
+
+## Enums
+
+- store set of constants and associate them with a numeric value
+
+- 
